@@ -12,16 +12,21 @@ ret = True
 # Read frames
 while ret:
     ret, frame = cap.read()
+    if ret:
 
-    # Detect objects
-    # Track objects
-    results = model.track(frame, persist=True)
 
-    # Plot results
-    frame_ = results[0].plot()
+        # Detect objects
+        # Track objects
+        results = model.track(frame, persist=True)
 
-    # Visualize
-    cv2.imshow("frame", frame_)
-    if cv2.waitKey(25) & 0xFF == ord("q"):
-        break
+        # Plot results
+        frame_ = results[0].plot()
+        # Alternatives to results[0].plot()
+        # cv2.recatangle
+        # cv2.putText
+
+        # Visualize
+        cv2.imshow("frame", frame_)
+        if cv2.waitKey(25) & 0xFF == ord("q"):
+            break
 
