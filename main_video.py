@@ -29,4 +29,3 @@ while ret:
         cv2.imshow("frame", frame_)
         if cv2.waitKey(25) & 0xFF == ord("q"):
             break
-
