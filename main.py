@@ -1,17 +1,27 @@
 from ultralytics import YOLO
+import cv2
 
 # Load yolov8 model
-model = YOLO('yolov8n.py')
+model = YOLO('yolov8n.pt')
 
 # Load video
+video_path = "./demo.mp4"
+cap = cv2.VideoCapture(video_path)
 
-
+ret = True
 # Read frames
+while ret:
+    ret, frame = cap.read()
 
-# Detect objects
+    # Detect objects
+    # Track objects
+    results = model.track(frame, persist=True)
 
-# Track objects
+    # Plot results
+    frame_ = results[0].plot()
 
-# Plot results
+    # Visualize
+    cv2.imshow("frame", frame_)
+    if cv2.waitKey(25) & 0xFF == ord("q"):
+        break
 
-# Visualize
