@@ -13,8 +13,6 @@ ret = True
 while ret:
     ret, frame = cap.read()
     if ret:
-
-
         # Detect objects
         # Track objects
         results = model.track(frame, persist=True)
