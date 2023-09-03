@@ -7,6 +7,6 @@ roboflow:
   url: https://universe.roboflow.com/moinfaisal/potholes-detection-yolonas/dataset/5
   version: 5
   workspace: moinfaisal
-test: potholes-detection-yolonas-5/test/images
-train: potholes-detection-yolonas-5/train/images
-val: potholes-detection-yolonas-5/valid/imags
+test: test/images
+train: train/images
+val: valid/images
