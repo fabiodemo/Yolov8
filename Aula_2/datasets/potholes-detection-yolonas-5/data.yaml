@@ -1,0 +1,12 @@
+names:
+- pothole
+nc: 1
+roboflow:
+  license: CC BY 4.0
+  project: potholes-detection-yolonas
+  url: https://universe.roboflow.com/moinfaisal/potholes-detection-yolonas/dataset/5
+  version: 5
+  workspace: moinfaisal
+test: /home/fabio/Documents/Github/Yolov8/Aula_2/datasets/potholes-detection-yolonas-5/test/images
+train: /home/fabio/Documents/Github/Yolov8/Aula_2/datasets/potholes-detection-yolonas-5/train/images
+val: /home/fabio/Documents/Github/Yolov8/Aula_2/datasets/potholes-detection-yolonas-5/valid/images
